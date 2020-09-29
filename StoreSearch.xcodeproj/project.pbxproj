@@ -14,7 +14,7 @@
 		BEC612E02522C080005968C4 /* StoreSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEC612DE2522C080005968C4 /* StoreSearch.xcdatamodeld */; };
 		BEC612E22522C081005968C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC612E12522C081005968C4 /* Assets.xcassets */; };
 		BEC612E52522C081005968C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC612E32522C081005968C4 /* LaunchScreen.storyboard */; };
-		BEC612F02522C081005968C4 /* StoreSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC612EF2522C081005968C4 /* StoreSearchTests.swift */; };
+		BEC613162522D6CD005968C4 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC613152522D6CD005968C4 /* SearchResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,9 +45,8 @@
 		BEC612E42522C081005968C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEC612E62522C081005968C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEC612EB2522C081005968C4 /* StoreSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoreSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BEC612EF2522C081005968C4 /* StoreSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSearchTests.swift; sourceTree = "<group>"; };
-		BEC612F12522C081005968C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEC612F62522C081005968C4 /* StoreSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoreSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEC613152522D6CD005968C4 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				BEC612D42522C080005968C4 /* StoreSearch */,
-				BEC612EE2522C081005968C4 /* StoreSearchTests */,
 				BEC612D32522C080005968C4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,17 +103,9 @@
 				BEC612E32522C081005968C4 /* LaunchScreen.storyboard */,
 				BEC612E62522C081005968C4 /* Info.plist */,
 				BEC612DE2522C080005968C4 /* StoreSearch.xcdatamodeld */,
+				BEC613152522D6CD005968C4 /* SearchResult.swift */,
 			);
 			path = StoreSearch;
-			sourceTree = "<group>";
-		};
-		BEC612EE2522C081005968C4 /* StoreSearchTests */ = {
-			isa = PBXGroup;
-			children = (
-				BEC612EF2522C081005968C4 /* StoreSearchTests.swift */,
-				BEC612F12522C081005968C4 /* Info.plist */,
-			);
-			path = StoreSearchTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +240,7 @@
 			files = (
 				BEC612DA2522C080005968C4 /* SearchViewController.swift in Sources */,
 				BEC612D62522C080005968C4 /* AppDelegate.swift in Sources */,
+				BEC613162522D6CD005968C4 /* SearchResult.swift in Sources */,
 				BEC612D82522C080005968C4 /* SceneDelegate.swift in Sources */,
 				BEC612E02522C080005968C4 /* StoreSearch.xcdatamodeld in Sources */,
 			);
@@ -259,7 +250,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEC612F02522C081005968C4 /* StoreSearchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
