@@ -9,13 +9,12 @@
 /* Begin PBXBuildFile section */
 		BEC612D62522C080005968C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC612D52522C080005968C4 /* AppDelegate.swift */; };
 		BEC612D82522C080005968C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC612D72522C080005968C4 /* SceneDelegate.swift */; };
-		BEC612DA2522C080005968C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC612D92522C080005968C4 /* ViewController.swift */; };
+		BEC612DA2522C080005968C4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC612D92522C080005968C4 /* SearchViewController.swift */; };
 		BEC612DD2522C080005968C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC612DB2522C080005968C4 /* Main.storyboard */; };
 		BEC612E02522C080005968C4 /* StoreSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEC612DE2522C080005968C4 /* StoreSearch.xcdatamodeld */; };
 		BEC612E22522C081005968C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC612E12522C081005968C4 /* Assets.xcassets */; };
 		BEC612E52522C081005968C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC612E32522C081005968C4 /* LaunchScreen.storyboard */; };
 		BEC612F02522C081005968C4 /* StoreSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC612EF2522C081005968C4 /* StoreSearchTests.swift */; };
-		BEC612FB2522C081005968C4 /* StoreSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC612FA2522C081005968C4 /* StoreSearchUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +38,7 @@
 		BEC612D22522C080005968C4 /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC612D52522C080005968C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEC612D72522C080005968C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BEC612D92522C080005968C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BEC612D92522C080005968C4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		BEC612DC2522C080005968C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BEC612DF2522C080005968C4 /* StoreSearch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StoreSearch.xcdatamodel; sourceTree = "<group>"; };
 		BEC612E12522C081005968C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,8 +48,6 @@
 		BEC612EF2522C081005968C4 /* StoreSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSearchTests.swift; sourceTree = "<group>"; };
 		BEC612F12522C081005968C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEC612F62522C081005968C4 /* StoreSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoreSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BEC612FA2522C081005968C4 /* StoreSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSearchUITests.swift; sourceTree = "<group>"; };
-		BEC612FC2522C081005968C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +80,6 @@
 			children = (
 				BEC612D42522C080005968C4 /* StoreSearch */,
 				BEC612EE2522C081005968C4 /* StoreSearchTests */,
-				BEC612F92522C081005968C4 /* StoreSearchUITests */,
 				BEC612D32522C080005968C4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,7 +99,7 @@
 			children = (
 				BEC612D52522C080005968C4 /* AppDelegate.swift */,
 				BEC612D72522C080005968C4 /* SceneDelegate.swift */,
-				BEC612D92522C080005968C4 /* ViewController.swift */,
+				BEC612D92522C080005968C4 /* SearchViewController.swift */,
 				BEC612DB2522C080005968C4 /* Main.storyboard */,
 				BEC612E12522C081005968C4 /* Assets.xcassets */,
 				BEC612E32522C081005968C4 /* LaunchScreen.storyboard */,
@@ -120,15 +116,6 @@
 				BEC612F12522C081005968C4 /* Info.plist */,
 			);
 			path = StoreSearchTests;
-			sourceTree = "<group>";
-		};
-		BEC612F92522C081005968C4 /* StoreSearchUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BEC612FA2522C081005968C4 /* StoreSearchUITests.swift */,
-				BEC612FC2522C081005968C4 /* Info.plist */,
-			);
-			path = StoreSearchUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,7 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEC612DA2522C080005968C4 /* ViewController.swift in Sources */,
+				BEC612DA2522C080005968C4 /* SearchViewController.swift in Sources */,
 				BEC612D62522C080005968C4 /* AppDelegate.swift in Sources */,
 				BEC612D82522C080005968C4 /* SceneDelegate.swift in Sources */,
 				BEC612E02522C080005968C4 /* StoreSearch.xcdatamodeld in Sources */,
@@ -280,7 +267,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEC612FB2522C081005968C4 /* StoreSearchUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
