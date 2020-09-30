@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE56035F252405EF007FDCB5 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE56035B252405EF007FDCB5 /* NothingFoundCell.xib */; };
+		BE560360252405EF007FDCB5 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE56035C252405EF007FDCB5 /* SearchResultCell.swift */; };
+		BE560361252405EF007FDCB5 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE56035D252405EF007FDCB5 /* SearchResult.swift */; };
+		BE560362252405EF007FDCB5 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE56035E252405EF007FDCB5 /* SearchResultCell.xib */; };
 		BEC612D62522C080005968C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC612D52522C080005968C4 /* AppDelegate.swift */; };
 		BEC612D82522C080005968C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC612D72522C080005968C4 /* SceneDelegate.swift */; };
 		BEC612DA2522C080005968C4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC612D92522C080005968C4 /* SearchViewController.swift */; };
@@ -14,7 +18,6 @@
 		BEC612E02522C080005968C4 /* StoreSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEC612DE2522C080005968C4 /* StoreSearch.xcdatamodeld */; };
 		BEC612E22522C081005968C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC612E12522C081005968C4 /* Assets.xcassets */; };
 		BEC612E52522C081005968C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC612E32522C081005968C4 /* LaunchScreen.storyboard */; };
-		BEC613162522D6CD005968C4 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC613152522D6CD005968C4 /* SearchResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE56035B252405EF007FDCB5 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
+		BE56035C252405EF007FDCB5 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		BE56035D252405EF007FDCB5 /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchResult.swift; path = ../../StoreSearchCopy/StoreSearch/StoreSearch/SearchResult.swift; sourceTree = "<group>"; };
+		BE56035E252405EF007FDCB5 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		BEC612D22522C080005968C4 /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC612D52522C080005968C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEC612D72522C080005968C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +53,6 @@
 		BEC612E62522C081005968C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEC612EB2522C081005968C4 /* StoreSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoreSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC612F62522C081005968C4 /* StoreSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoreSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BEC613152522D6CD005968C4 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +109,10 @@
 				BEC612E32522C081005968C4 /* LaunchScreen.storyboard */,
 				BEC612E62522C081005968C4 /* Info.plist */,
 				BEC612DE2522C080005968C4 /* StoreSearch.xcdatamodeld */,
-				BEC613152522D6CD005968C4 /* SearchResult.swift */,
+				BE56035D252405EF007FDCB5 /* SearchResult.swift */,
+				BE56035C252405EF007FDCB5 /* SearchResultCell.swift */,
+				BE56035E252405EF007FDCB5 /* SearchResultCell.xib */,
+				BE56035B252405EF007FDCB5 /* NothingFoundCell.xib */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -211,6 +220,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE56035F252405EF007FDCB5 /* NothingFoundCell.xib in Resources */,
+				BE560362252405EF007FDCB5 /* SearchResultCell.xib in Resources */,
 				BEC612E52522C081005968C4 /* LaunchScreen.storyboard in Resources */,
 				BEC612E22522C081005968C4 /* Assets.xcassets in Resources */,
 				BEC612DD2522C080005968C4 /* Main.storyboard in Resources */,
@@ -239,9 +250,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEC612DA2522C080005968C4 /* SearchViewController.swift in Sources */,
+				BE560361252405EF007FDCB5 /* SearchResult.swift in Sources */,
 				BEC612D62522C080005968C4 /* AppDelegate.swift in Sources */,
-				BEC613162522D6CD005968C4 /* SearchResult.swift in Sources */,
 				BEC612D82522C080005968C4 /* SceneDelegate.swift in Sources */,
+				BE560360252405EF007FDCB5 /* SearchResultCell.swift in Sources */,
 				BEC612E02522C080005968C4 /* StoreSearch.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
