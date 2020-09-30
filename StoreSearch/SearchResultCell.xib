@@ -54,6 +54,11 @@
                     <outlet property="nameLabel" destination="trL-WN-eIV" id="hBf-fJ-Bic"/>
                 </connections>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="artistNameLabel" destination="0xb-yj-DUQ" id="Ony-qP-Rxq"/>
+                <outlet property="artworkImageView" destination="zwY-CT-zfm" id="gRU-xD-Dnr"/>
+                <outlet property="nameLabel" destination="trL-WN-eIV" id="zBT-U6-dpm"/>
+            </connections>
             <point key="canvasLocation" x="78.260869565217391" y="39.508928571428569"/>
         </tableViewCell>
     </objects>

@@ -2,7 +2,7 @@
 //  SearchResult.swift
 //  StoreSearch
 //
-//  Created by Tahlia Callegari on 9/28/20.
+//  Created by Tahlia Callegari on 9/29/20.
 //
 
 import Foundation
@@ -10,4 +10,5 @@ import Foundation
 class SearchResult {
     var name = ""
     var artistName = ""
+    
 }
