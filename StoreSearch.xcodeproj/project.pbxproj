@@ -20,23 +20,6 @@
 		BEC612E52522C081005968C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC612E32522C081005968C4 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		BEC612EC2522C081005968C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BEC612CA2522C080005968C4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BEC612D12522C080005968C4;
-			remoteInfo = StoreSearch;
-		};
-		BEC612F72522C081005968C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BEC612CA2522C080005968C4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BEC612D12522C080005968C4;
-			remoteInfo = StoreSearch;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		BE56035B252405EF007FDCB5 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 		BE56035C252405EF007FDCB5 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
@@ -51,26 +34,10 @@
 		BEC612E12522C081005968C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEC612E42522C081005968C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEC612E62522C081005968C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BEC612EB2522C081005968C4 /* StoreSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoreSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BEC612F62522C081005968C4 /* StoreSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoreSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BEC612CF2522C080005968C4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BEC612E82522C081005968C4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BEC612F32522C081005968C4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -92,8 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				BEC612D22522C080005968C4 /* StoreSearch.app */,
-				BEC612EB2522C081005968C4 /* StoreSearchTests.xctest */,
-				BEC612F62522C081005968C4 /* StoreSearchUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,42 +102,6 @@
 			productReference = BEC612D22522C080005968C4 /* StoreSearch.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BEC612EA2522C081005968C4 /* StoreSearchTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BEC613022522C081005968C4 /* Build configuration list for PBXNativeTarget "StoreSearchTests" */;
-			buildPhases = (
-				BEC612E72522C081005968C4 /* Sources */,
-				BEC612E82522C081005968C4 /* Frameworks */,
-				BEC612E92522C081005968C4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BEC612ED2522C081005968C4 /* PBXTargetDependency */,
-			);
-			name = StoreSearchTests;
-			productName = StoreSearchTests;
-			productReference = BEC612EB2522C081005968C4 /* StoreSearchTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		BEC612F52522C081005968C4 /* StoreSearchUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BEC613052522C081005968C4 /* Build configuration list for PBXNativeTarget "StoreSearchUITests" */;
-			buildPhases = (
-				BEC612F22522C081005968C4 /* Sources */,
-				BEC612F32522C081005968C4 /* Frameworks */,
-				BEC612F42522C081005968C4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BEC612F82522C081005968C4 /* PBXTargetDependency */,
-			);
-			name = StoreSearchUITests;
-			productName = StoreSearchUITests;
-			productReference = BEC612F62522C081005968C4 /* StoreSearchUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,14 +113,6 @@
 				TargetAttributes = {
 					BEC612D12522C080005968C4 = {
 						CreatedOnToolsVersion = 12.0;
-					};
-					BEC612EA2522C081005968C4 = {
-						CreatedOnToolsVersion = 12.0;
-						TestTargetID = BEC612D12522C080005968C4;
-					};
-					BEC612F52522C081005968C4 = {
-						CreatedOnToolsVersion = 12.0;
-						TestTargetID = BEC612D12522C080005968C4;
 					};
 				};
 			};
@@ -209,8 +130,6 @@
 			projectRoot = "";
 			targets = (
 				BEC612D12522C080005968C4 /* StoreSearch */,
-				BEC612EA2522C081005968C4 /* StoreSearchTests */,
-				BEC612F52522C081005968C4 /* StoreSearchUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -225,20 +144,6 @@
 				BEC612E52522C081005968C4 /* LaunchScreen.storyboard in Resources */,
 				BEC612E22522C081005968C4 /* Assets.xcassets in Resources */,
 				BEC612DD2522C080005968C4 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BEC612E92522C081005968C4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BEC612F42522C081005968C4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,34 +163,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BEC612E72522C081005968C4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BEC612F22522C081005968C4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		BEC612ED2522C081005968C4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BEC612D12522C080005968C4 /* StoreSearch */;
-			targetProxy = BEC612EC2522C081005968C4 /* PBXContainerItemProxy */;
-		};
-		BEC612F82522C081005968C4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BEC612D12522C080005968C4 /* StoreSearch */;
-			targetProxy = BEC612F72522C081005968C4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BEC612DB2522C080005968C4 /* Main.storyboard */ = {
@@ -461,90 +339,6 @@
 			};
 			name = Release;
 		};
-		BEC613032522C081005968C4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VLQV2FA9D8;
-				INFOPLIST_FILE = StoreSearchTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = comTahliaCallegari.StoreSearchTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StoreSearch.app/StoreSearch";
-			};
-			name = Debug;
-		};
-		BEC613042522C081005968C4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VLQV2FA9D8;
-				INFOPLIST_FILE = StoreSearchTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = comTahliaCallegari.StoreSearchTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StoreSearch.app/StoreSearch";
-			};
-			name = Release;
-		};
-		BEC613062522C081005968C4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VLQV2FA9D8;
-				INFOPLIST_FILE = StoreSearchUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = comTahliaCallegari.StoreSearchUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = StoreSearch;
-			};
-			name = Debug;
-		};
-		BEC613072522C081005968C4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VLQV2FA9D8;
-				INFOPLIST_FILE = StoreSearchUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = comTahliaCallegari.StoreSearchUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = StoreSearch;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -562,24 +356,6 @@
 			buildConfigurations = (
 				BEC613002522C081005968C4 /* Debug */,
 				BEC613012522C081005968C4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BEC613022522C081005968C4 /* Build configuration list for PBXNativeTarget "StoreSearchTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BEC613032522C081005968C4 /* Debug */,
-				BEC613042522C081005968C4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BEC613052522C081005968C4 /* Build configuration list for PBXNativeTarget "StoreSearchUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BEC613062522C081005968C4 /* Debug */,
-				BEC613072522C081005968C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
