@@ -11,6 +11,10 @@ class SearchViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBAction func segmentChanged(_ sender: UISegmentedControl) {
+        performSearch()
+    }
     
     var searchResults = [SearchResult]()
     var hasSearched = false
@@ -27,7 +31,7 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // tableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0)
+        //tableView.contentInset = UIEdgeInsets(top: 108, left: 0, bottom: 0, right: 0)
         var cellNib = UINib(nibName: TableView.CellIdentifiers.searchResultCell, bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: TableView.CellIdentifiers.searchResultCell)
         cellNib = UINib(nibName: TableView.CellIdentifiers.nothingFoundCell, bundle: nil)
@@ -36,11 +40,26 @@ class SearchViewController: UIViewController {
         tableView.register(cellNib, forCellReuseIdentifier: TableView.CellIdentifiers.loadingCell)
         searchBar.becomeFirstResponder()
 
+        let segmentColor = UIColor(red: 10/255, green: 80/255, blue: 80/255, alpha: 1)
+        let selectedTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        let  normalTextAttributes = [NSAttributedString.Key.foregroundColor: segmentColor]
+            segmentedControl.selectedSegmentTintColor = segmentColor
+        
+        segmentedControl.setTitleTextAttributes(normalTextAttributes,for: .normal)
+        segmentedControl.setTitleTextAttributes(selectedTextAttributes,for: .selected)
+        segmentedControl.setTitleTextAttributes(selectedTextAttributes,for: .highlighted)
     }
 //MARK:- Helper Methods
-    func iTunesURL(searchText: String) -> URL {
+    func iTunesURL(searchText: String, category: Int) -> URL {
+        let kind: String
+        switch category {
+        case 1: kind = "musicTrack"
+        case 2: kind = "software"
+        case 3: kind = "ebook"
+        default: kind = ""
+        }
         let encodedText = searchText.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-        let urlString = String(format: "https://itunes.apple.com/search?term=%@&limit=200", encodedText)
+        let urlString = "https://itunes.apple.com/search?term=\(encodedText)&limit=200&entity=\(kind)"
         let url = URL(string: urlString)
         return url!
     }
@@ -57,7 +76,7 @@ class SearchViewController: UIViewController {
 }
 
 extension SearchViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    func performSearch() {
         if !searchBar.text!.isEmpty{
             searchBar.resignFirstResponder()
             isLoading = true
@@ -66,7 +85,7 @@ extension SearchViewController: UISearchBarDelegate {
             hasSearched = true
             searchResults = []
             
-            let url = iTunesURL(searchText: searchBar.text!)
+            let url = iTunesURL(searchText: searchBar.text!, category: segmentedControl.selectedSegmentIndex)
             let session = URLSession.shared
             
             dataTask = session.dataTask(with: url, completionHandler: { data, response, error in
@@ -106,6 +125,9 @@ extension SearchViewController: UISearchBarDelegate {
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        performSearch()
+    }
 }
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -127,22 +149,14 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
             let spinner = cell.viewWithTag(100) as! UIActivityIndicatorView
             spinner.startAnimating()
             return cell
-        }else
-        
-        if searchResults.count == 0 {
+        } else if searchResults.count == 0 {
           return tableView.dequeueReusableCell(withIdentifier:
             TableView.CellIdentifiers.nothingFoundCell, for: indexPath)
         } else {
           let cell = tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifiers.searchResultCell, for: indexPath) as! SearchResultCell
           let searchResult = searchResults[indexPath.row]
-          cell.nameLabel.text = searchResult.name
-          if searchResult.artist.isEmpty {
-            cell.artistNameLabel.text = "Unknown"
-          } else {
-            cell.artistNameLabel.text = String(format: "%@ (%@)", searchResult.artist, searchResult.type)
-          }
-        
-        return cell
+            cell.configure(for: searchResult)
+            return cell
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
