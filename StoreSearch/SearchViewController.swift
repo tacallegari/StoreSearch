@@ -12,10 +12,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-    @IBAction func segmentChanged(_ sender: UISegmentedControl) {
-        performSearch()
-    }
-    
+
     var searchResults = [SearchResult]()
     var hasSearched = false
     var isLoading = false
@@ -48,8 +45,23 @@ class SearchViewController: UIViewController {
         segmentedControl.setTitleTextAttributes(normalTextAttributes,for: .normal)
         segmentedControl.setTitleTextAttributes(selectedTextAttributes,for: .selected)
         segmentedControl.setTitleTextAttributes(selectedTextAttributes,for: .highlighted)
+        
+        }
+        
+        @IBAction func segmentChanged(_ sender: UISegmentedControl) {
+            performSearch()
+        }
+
+     //MARK:- Naviagation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "ShowDetail" {
+            let detailViewController = segue.destination as! DetailViewController
+            let indexPath = sender as! IndexPath
+            let searchResult = searchResults[indexPath.row]
+            detailViewController.searchResult = searchResult
+        }
     }
-//MARK:- Helper Methods
+    //MARK:- Helper Methods
     func iTunesURL(searchText: String, category: Int) -> URL {
         let kind: String
         switch category {
@@ -72,6 +84,14 @@ class SearchViewController: UIViewController {
             print("JSON Error: \(error)")
             return []
         }
+    }
+    
+    func showNetworkError() {
+        let alert = UIAlertController(title: "Whoops...", message: "There was an error accessing the iTunes Store." + "Please try again.", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
 }
 
@@ -118,13 +138,6 @@ extension SearchViewController: UISearchBarDelegate {
         return .topAttached
     }
     
-    func showNetworkError() {
-        let alert = UIAlertController(title: "Whoops...", message: "There was an error accessing the iTunes Store." + "Please try again.", preferredStyle: .alert)
-        
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alert.addAction(action)
-        present(alert, animated: true, completion: nil)
-    }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         performSearch()
     }
@@ -161,6 +174,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "ShowDetail", sender: indexPath)
     }
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         if searchResults.count == 0 || isLoading{
